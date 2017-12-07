@@ -31,11 +31,14 @@ class DetailAdapter(val list:List<TrackModel.Track>) : RecyclerView.Adapter<Deta
         fun bindItems(model : TrackModel.Track){
             if(model.strTrackThumb.isNullOrEmpty()){
                 itemView.iv_row_detail.setImageResource(R.drawable.coldplaylogo)
-                itemView.tv_desc_row_detail.text = itemView.context.getString(R.string.description_dummy)
             }else {
                 Glide.with(itemView)
                         .load(model.strTrackThumb)
                         .into(itemView.iv_row_detail)
+            }
+            if(model.strDescriptionEN.isNullOrEmpty()){
+                itemView.tv_desc_row_detail.text = itemView.context.getString(R.string.description_dummy)
+            }else{
                 itemView.tv_desc_row_detail.text = model.strDescriptionEN
             }
             itemView.tv_title_row_detail.text = model.strTrack
