@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="16dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/iv_row_detail"
+        tools:src="@drawable/coldplaylogo"
+        android:layout_width="125dp"
+        android:layout_height="125dp" />
+
+    <LinearLayout
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title_row_detail"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="In My Place"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/tv_desc_row_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="A Coldplay's Song"
+            android:maxLines="4"
+            android:ellipsize="end"/>
+
+    </LinearLayout>
+
+</LinearLayout>
